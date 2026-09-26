@@ -12,11 +12,7 @@ kubectl get pods -n todoapp -o wide
 kubectl exec -it {name_of_app_pod} -- sh
 
 # inside the pod
-ls
 ```
-If it gives the secrets and configs directories there are they
-```
-cd {secrets / configs}
-
-cat {file_that_value_you_need}
+ls -la /app/configs # To check if configs exist as file
+ls -la /app/secrets # To check if secrets exist as file
 ```

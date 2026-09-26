@@ -1,8 +1,5 @@
 #!/bin/bash
 set -euo pipefail
-
-# Run kubectl with paths relative to this script, regardless of the caller's directory.
-cd "$(dirname "${BASH_SOURCE[0]}")"
 # Namespace
 kubectl apply -f .infrastructure/namespace.yml
 
